@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Dark theme with electric blue accent */
+
+@layer base {
+  :root {
+    /* Dark theme base colors */
+    --background: 220 15% 8%;
+    --foreground: 220 10% 95%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 220 10% 95%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 10% 95%;
+
+    /* Electric blue primary with vibrant accent */
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 15% 8%;
+    --primary-glow: 217 91% 70%;
+
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 220 10% 85%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 5% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 220 15% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 10% 95%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom portfolio colors */
+    --hero-gradient-start: 217 91% 60%;
+    --hero-gradient-end: 260 80% 65%;
+    --card-hover: 220 15% 12%;
+    --text-muted: 220 5% 70%;
+    --glow-color: 217 91% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--hero-gradient-end)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+
+    /* Shadows and glows */
+    --shadow-glow: 0 0 40px hsl(var(--glow-color) / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(var(--background) / 0.8);
+    --shadow-hover: 0 20px 40px -10px hsl(var(--glow-color) / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-family: 'Inter', 'Poppins', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
